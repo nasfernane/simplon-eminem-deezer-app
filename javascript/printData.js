@@ -6,10 +6,9 @@
 const albumsDiv = document.querySelector('.album-list');
 const modeleCard = document.querySelector('.album-list .card');
 
-// crée un compteur pour la position de l'album
-let albumPosition = 1;
-
 const displayAlbums = function () {
+    // crée un compteur pour la position de l'album
+    let albumPosition = 1;
     // pour chaque album
     for (const item of data) {
         // on crée un clone du modèle de card Bootstrap
