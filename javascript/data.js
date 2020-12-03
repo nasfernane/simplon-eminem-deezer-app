@@ -12,7 +12,7 @@ const data = [
         explicit_content_lyrics: 1,
         explicit_content_cover: 0,
         preview:
-            '//cdn-preview-1.deezer.com/stream/c-13039fed16a173733f227b0bec631034-12.mp3',
+            'http://cdn-preview-1.deezer.com/stream/c-13039fed16a173733f227b0bec631034-12.mp3',
         contributors: [
             {
                 id: 13,
@@ -51,7 +51,7 @@ const data = [
             cover_medium:
                 'http://cdn-images.deezer.com/images/cover/e2b36a9fda865cb2e9ed1476b6291a7d/250x250-000000-80-0-0.jpg',
             cover_big:
-                'http://cdn-images.deezer.com/images/cover/e2b36a9fda865cb2e9ed1476b6291a7d/500x500-000000-80-0-0.jpg',
+                '//cdn-images.deezer.com/images/cover/e2b36a9fda865cb2e9ed1476b6291a7d/500x500-000000-80-0-0.jpg',
             cover_xl:
                 'http://cdn-images.deezer.com/images/cover/e2b36a9fda865cb2e9ed1476b6291a7d/1000x1000-000000-80-0-0.jpg',
             md5_image: 'e2b36a9fda865cb2e9ed1476b6291a7d',
