@@ -1,0 +1,64 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    color: #434343;
+}
+
+body {
+    font-size: 62.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
+}
+
+section#landing {
+    height: 100vh;
+    width: 100%;
+    background: url('/img/landing.jpg') center no-repeat fixed;
+    background-size: cover;
+}
+
+#showAlbums {
+    border-radius: 16px;
+    background-color: #f1f2f3;
+    color: #434343;
+    font-size: 2rem;
+    width: 50%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.album-list {
+    background-color: #e0e0e0;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 380px;
+    height: auto;
+    margin: 20px;
+    border-radius: 16px;
+    display: none;
+}
+
+.card a {
+    border-radius: 16px;
+    background-color: #f1f2f3;
+    color: #434343;
+    border: 0px;
+}
+
+.card a:hover {
+    background: #434343;
+    color: #f1f2f3;
+}
+.card audio {
+    margin-top: 10px;
+}
