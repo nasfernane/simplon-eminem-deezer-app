@@ -12,7 +12,7 @@ const data = [
         explicit_content_lyrics: 1,
         explicit_content_cover: 0,
         preview:
-            'http://cdn-preview-1.deezer.com/stream/c-13039fed16a173733f227b0bec631034-12.mp3',
+            '//cdn-preview-1.deezer.com/stream/c-13039fed16a173733f227b0bec631034-12.mp3',
         contributors: [
             {
                 id: 13,
