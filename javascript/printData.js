@@ -4,34 +4,23 @@
 
 // WATCH Récupération des éléments
 const albumsDiv = document.querySelector('.album-list');
-const modeleCard = document.querySelector('.album-list .card');
 
 const displayAlbums = function () {
-    // crée un compteur pour la position de l'album
-    let albumPosition = 1;
     // pour chaque album
     for (const item of data) {
-        // pour chaque album on ajoute une card clonée sur le modèle bootstrap
-        albumsDiv.appendChild(modeleCard.cloneNode([true]));
-        // on implémente les données de l'album dans la div card
-        document.querySelector(`.card:nth-child(${albumPosition}) img`).src =
-            item.album.cover_big;
-        document.querySelector(`.card:nth-child(${albumPosition}) img`).alt =
-            item.album.cover_big;
-        document.querySelector(
-            `.card:nth-child(${albumPosition}) .card-body a`
-        ).href = item.album.tracklist;
-        document.querySelector(
-            `.card:nth-child(${albumPosition}) .card-body h5`
-        ).textContent = item.title;
-        document.querySelector(
-            `.card:nth-child(${albumPosition}) .card-body audio`
-        ).src = item.preview;
-        document.querySelector(
-            `.card:nth-child(${albumPosition})`
-        ).style.display = 'block';
-        // on incrémente le compteur de position
-        albumPosition++;
+        // on crée une card bootstrap en récupérant les infos de l'objet data
+        const html = `
+        <div class="card">
+                <img src="${item.album.cover_big}" class="card-img-top" alt="${item.title}" />
+                <div class="card-body">
+                    <h5 class="card-title">${item.title}</h5>
+                    <p class="card-text"></p>
+                    <a href="${item.album.tracklist}" class="btn btn-primary">Tracklist</a>
+                    <audio controls src="${item.preview}"></audio>
+                </div>
+            </div>`;
+
+        albumsDiv.insertAdjacentHTML('beforeend', html);
     }
     // on scroll vers le bas pour plus de visibilité sur les albums
     window.scroll(0, 900);
