@@ -11,10 +11,8 @@ const displayAlbums = function () {
     let albumPosition = 1;
     // pour chaque album
     for (const item of data) {
-        // on crée un clone du modèle de card Bootstrap
-        const tempDiv = modeleCard.cloneNode([true]);
-        // On insère la card sur la page HTML
-        albumsDiv.insertAdjacentElement('beforeend', tempDiv);
+        // pour chaque album on ajoute une card clonée sur le modèle bootstrap
+        albumsDiv.appendChild(modeleCard.cloneNode([true]));
         // on implémente les données de l'album dans la div card
         document.querySelector(`.card:nth-child(${albumPosition}) img`).src =
             item.album.cover_big;
@@ -32,18 +30,11 @@ const displayAlbums = function () {
         document.querySelector(
             `.card:nth-child(${albumPosition})`
         ).style.display = 'block';
-
         // on incrémente le compteur de position
         albumPosition++;
     }
-
     // on scroll vers le bas pour plus de visibilité sur les albums
     window.scroll(0, 900);
 };
 
 document.querySelector('#showAlbums').addEventListener('click', displayAlbums);
-
-// const firstCard = document.querySelector('.card:nth-child(1) img');
-
-// firstCard.alt = 'Mos Def';
-// firstCard.src = console.log(firstCard);
