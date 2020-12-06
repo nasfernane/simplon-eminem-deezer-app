@@ -4,14 +4,6 @@
 
 // lien API http://api.deezer.com/search/album?q=eminem
 
-var myHeaders = new Headers();
-var myInit = {
-    method: 'GET',
-    headers: myHeaders,
-    mode: 'no-cors',
-    cache: 'default',
-};
-
 // WATCH Récupération des éléments
 const albumsDiv = document.querySelector('.album-list');
 
@@ -37,11 +29,14 @@ const displayAlbums = function () {
 };
 
 const displayTracklist = function () {
-    fetch(`http://api.deezer.com/search/album?q=eminem`, myInit).then(
-        response => {
-            console.log(response);
-        }
-    );
+    fetchJsonp('http://api.deezer.com/search/album?q=eminem&output=jsonp')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(json => console.log(json))
+        .catch(function (error) {
+            console.log(error);
+        });
 };
 
 displayTracklist();
