@@ -16,13 +16,26 @@
     <body>
         <section id="landing"></section>
         <!-- button pour faire apparaître les albums -->
-        <button id="showAlbums">Voir les albums d'Eminem</button>
+        <div class="chooseArtist">
+            <button class="showAlbums" id="showEminem">
+                Voir les albums d'Eminem
+            </button>
+            <input
+                type="text"
+                class="showAlbums"
+                id="showOtherArtist"
+                size="20"
+                placeholder="Essayer un autre artiste"
+            />
+        </div>
+
         <!-- div qui contiendra tous les albums -->
         <div class="album-list"></div>
 
+        <!-- librairie qui aide à fetch sur deezer -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch-jsonp/1.1.1/fetch-jsonp.js"></script>
         <!-- Script Json avec les infos sur Eminem -->
-        <script src="javascript/data.js"></script>
+        <!-- <script src="javascript/data.js"></script> -->
         <!-- Script principal -->
         <script src="javascript/printData.js"></script>
     </body>

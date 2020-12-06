@@ -22,14 +22,27 @@ section#landing {
     /* background-size: cover; */
 }
 
-#showAlbums {
+.chooseArtist {
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+}
+
+.showAlbums {
     border-radius: 16px;
     background-color: #f1f2f3;
     color: #434343;
     font-size: 2rem;
-    width: 50%;
+    width: 40%;
     margin-top: 5vh;
     margin-bottom: 5vh;
+}
+
+#showOtherArtist {
+    padding: 10px;
+}
+#showOtherArtist::placeholder {
+    padding: 10px;
 }
 
 .album-list {
