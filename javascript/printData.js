@@ -2,6 +2,16 @@
 // 1 => Pour chaque album du fichier json, je crée une div card
 // 2 => pour chaque album, je récupère ses informations et je les implémente commes informations dans les div
 
+// lien API http://api.deezer.com/search/album?q=eminem
+
+var myHeaders = new Headers();
+var myInit = {
+    method: 'GET',
+    headers: myHeaders,
+    mode: 'no-cors',
+    cache: 'default',
+};
+
 // WATCH Récupération des éléments
 const albumsDiv = document.querySelector('.album-list');
 
@@ -25,5 +35,15 @@ const displayAlbums = function () {
     // on scroll vers le bas pour plus de visibilité sur les albums
     window.scroll(0, 900);
 };
+
+const displayTracklist = function () {
+    fetch(`http://api.deezer.com/search/album?q=eminem`, myInit).then(
+        response => {
+            console.log(response);
+        }
+    );
+};
+
+displayTracklist();
 
 document.querySelector('#showAlbums').addEventListener('click', displayAlbums);
