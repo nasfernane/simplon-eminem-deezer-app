@@ -61,14 +61,14 @@ section#landing {
     border-radius: 16px;
 }
 
-.card a {
+.card button {
     border-radius: 16px;
     background-color: #f1f2f3;
     color: #434343;
     border: 0px;
 }
 
-.card a:hover {
+.card button:hover {
     background: #434343;
     color: #f1f2f3;
 }
@@ -92,10 +92,7 @@ section#landing {
 
 /* contenu du pop-up */
 .modal-content {
-    background: linear-gradient(
-        rgba(240, 240, 240, 0.8),
-        rgba(240, 240, 240, 0.8)
-    );
+    background: #e0e0e0;
     position: fixed; /* position fixe */
     top: 5%;
     left: 25%;
@@ -138,4 +135,8 @@ section#landing {
     display: flex;
     justify-content: space-between;
     padding: 20px;
+}
+
+.modal-content p:hover {
+    text-decoration: underline;
 }
