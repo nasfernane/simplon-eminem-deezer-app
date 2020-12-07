@@ -75,3 +75,67 @@ section#landing {
 .card audio {
     margin-top: 10px;
 }
+
+/* Fenêtre modale globale */
+#myModal {
+    display: none;
+    position: fixed; /* reste en positiion fixe*/
+    z-index: 999; /* passe par dessus la première fenêtre */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* autorise le scroll si nécessaire*/
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* contenu du pop-up */
+.modal-content {
+    background: linear-gradient(
+        rgba(240, 240, 240, 0.8),
+        rgba(240, 240, 240, 0.8)
+    );
+    position: fixed; /* position fixe */
+    top: 5%;
+    left: 25%;
+    background-color: #fefefe;
+    margin: auto; /* marges latérales automatiques */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border: 1px solid #565050;
+    border-radius: 10px;
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    height: 90%;
+    width: 50%;
+    overflow: scroll;
+}
+
+/* Bouton pour fermer le pop up */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* bouton de fermeture du popup au survol */
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.track {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}

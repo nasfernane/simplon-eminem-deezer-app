@@ -28,6 +28,12 @@
                 placeholder="Essayer un autre artiste"
             />
         </div>
+        <div id="myModal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="tracklist"></div>
+            </div>
+        </div>
 
         <!-- div qui contiendra tous les albums -->
         <div class="album-list"></div>
@@ -38,5 +44,6 @@
         <!-- <script src="javascript/data.js"></script> -->
         <!-- Script principal -->
         <script src="javascript/printData.js"></script>
+        <script src="javascript/modal.js"></script>
     </body>
 </html>
